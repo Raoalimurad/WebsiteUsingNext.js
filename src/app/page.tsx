@@ -1,113 +1,162 @@
-import Image from 'next/image'
+import Wrapper from "./components/Wrapper"
+import Image from 'next/image';
+import doctor1 from "./asset/doct2.webp"
+import treatment from "./asset/treatment.png"
+import teeth from "./asset/teeth.png"
+import leg from "./asset/lrg.png"
+import diagnose from "./asset/diagnose.png"
+import cardiology from "./asset/cardiology.png"
+import surgery from "./asset/surgery.png"
+import eyecare from "./asset/eyecare.png"
+import member1 from "./asset/member1.png"
+import member2 from "./asset/member2.png"
+import member3 from "./asset/member3.png"
 
-export default function Home() {
+
+
+
+
+const home = () => {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <Wrapper>
+      <section className="hero1  herr">
+        <div className="heading">
+          <h1>Providing Quality <span className="health">Healthcare</span> for a <span>Brighter</span>  and <span>Healthy </span>Future</h1>
+          <p>At our hospital, we are dedicated to providing exceptional medical care to our patients and their families. Our experienced team of medical professionals, cutting-edge technology, and compassionate approach make us a leader in the healthcare industry</p>
+          <button className="btn">Appointment Book</button>
         </div>
-      </div>
+        <div className="doctor">
+          <div className="minidoc">
+            <Image src={doctor1} alt="doctor logo" className="doc" />
+          </div>
+        </div>
+      </section>
+      <section className="hero2">
+        <div className="results">
+          <h1>Our results in numbers</h1>
+        </div>
+        <div className="about">
+          <div><h2>99%</h2><h5>Customer satisfaction</h5></div>
+          <div><h2>15k</h2><h5>Online Patients</h5></div>
+          <div><h2>12k</h2><h5>Patients Recovered</h5></div>
+          <div><h2>240%</h2><h5>Company growth</h5></div>
+        </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section className="hero1">
+        <div className="heading2">
+          <h1>You have lots of reasons to choose us</h1>
+          <p>At our hospital, we are dedicated to providing exceptional medical care to our patients and their families. Our experienced team of medical professionals, cutting-edge technology, and compassionate approach make us a leader in the healthcare industry</p>
+          <button className="btn">Appointment Book</button>
+        </div>
+        <div className="doc2">
+          <div className="treatment">
+            <Image src={treatment} alt="doctor logo" className="treatmentpic" />
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <section >
+        <div className="service">
+          <h1>Services we provide </h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing <br />elit semper dalar elementum tempus hac tellus libero accumsan. </p>
+        </div>
+      </section>
+      <section className="cards">
+        <div className="card">
+          <div className="imgage">
+            <Image src={leg} alt="doctor logo" className="teeth" />
+          </div>
+          <h3>Dental treatments</h3>
+          <h6>Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.</h6>
+          <h6>Learn More</h6>
+        </div>
+        <div className="card">
+          <div className="imgage">
+            <Image src={teeth} alt="doctor logo" className="teeth" />
+          </div>
+          <h3>Dental treatments</h3>
+          <h6>Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.</h6>
+          <h6>Learn More</h6>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        </div>
+        <div className="card">
+          <div className="imgage">
+            <Image src={diagnose} alt="doctor logo" className="teeth" />
+          </div>
+          <h3>Dental treatments</h3>
+          <h6>Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.</h6>
+          <h6>Learn More</h6>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        </div>
+
+
+      </section>
+      <section className="cards  minicard">
+        <div className="card">
+          <div className="imgage">
+            <Image src={cardiology} alt="doctor logo" className="teeth" />
+          </div>
+          <h3>Dental treatments</h3>
+          <h6>Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.</h6>
+          <h6>Learn More</h6>
+        </div>
+        <div className="card">
+          <div className="imgage">
+            <Image src={surgery} alt="doctor logo" className="teeth" />
+          </div>
+          <h3>Dental treatments</h3>
+          <h6>Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.</h6>
+          <h6>Learn More</h6>
+
+        </div>
+        <div className="card">
+          <div className="imgage">
+            <Image src={eyecare} alt="doctor logo" className="teeth" />
+          </div>
+          <h3>Dental treatments</h3>
+          <h6>Lorem ipsum dolor sit amet consecte tur adipiscing elit semper dalaracc lacus vel facilisis volutpat est velitolm.</h6>
+          <h6>Learn More</h6>
+
+        </div>
+
+
+      </section>
+
+      <section >
+        <div className="service meet">
+          <h1>Meet our team members</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing <br />elit semper dalar elementum tempus hac tellus libero accumsan. </p>
+        </div>
+      </section>
+      <section>
+        <div className="member">
+          <div className="members">
+            <Image src={member1} alt="doctor logo" className="mem1" />
+            <p>John Carter</p>
+            <h5>CEO & Co-Founder</h5>
+            <h6>Lorem ipsum dolor sit amet consecte adipiscing elit amet hendrerit pretium nulla sed enim iaculis mi. </h6>
+          </div>
+          <div className="members">
+            <Image src={member2} alt="doctor logo" className="mem1" />
+            <p>John Carter</p>
+            <h5>CEO & Co-Founder</h5>
+            <h6>Lorem ipsum dolor sit amet consecte adipiscing elit amet hendrerit pretium nulla sed enim iaculis mi. </h6>
+          </div>
+          <div className="members">
+            <Image src={member3} alt="doctor logo" className="mem1" />
+            <p>John Carter</p>
+            <h5>CEO & Co-Founder</h5>
+            <h6>Lorem ipsum dolor sit amet consecte adipiscing elit amet hendrerit pretium nulla sed enim iaculis mi. </h6>
+          </div>
+        </div>
+      </section>
+
+    </Wrapper>
+
+
   )
 }
+export default home

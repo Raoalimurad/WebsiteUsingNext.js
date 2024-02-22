@@ -1,6 +1,10 @@
+// Layout.js
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Head from 'next/head'
 import './globals.css'
+import Header from './Layout/header'
+import Footer from './Layout/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +20,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <title>my website</title>
+        {/* Other meta tags, stylesheets, etc. */}
+      </Head>
+      <body className={inter.className}>
+        <Header />
+        {children}
+        <Footer/>
+      </body>
     </html>
   )
 }

@@ -1,27 +1,791 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@tailwind utilities; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+header {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  align-items: center;
+  padding: 10px; /* Increase padding for better spacing on small screens */
+  background-color: whitesmoke;
+  position:fixed;
+  top: 0;
+  width: 100%; /* Add width to occupy the full width of the viewport */
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 90px 70px rgba(0, 0, 0, 0.12);
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: green;
+  padding-right: 10px;
+  text-align: center;
+  list-style: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.nav-link {
+  color:#6EAB36;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;  
+}
+.nav-link:hover {
+  color: #4a7021; 
+}
+
+.container {
+  text-align: center;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto; /* Ensures the image scales proportionally */
+}
+
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 540px) {
+  ul {
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px; 
+    text-align: center;
+    margin: 0 auto;
+   
+  }
+
+  ul li {
+    margin-bottom: 5px; /* Add some spacing between list items on small screens */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* default  */
+.default{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 8px;
+  background-color: #ECECEC;
 }
+.hero1{
+  display: flex;
+  align-items: center;
+  /* background-color: #ECECEC; */
+}
+.herr{
+  margin-top: 80px;
+ 
+}
+.doctor{
+  width: 60%;
+}
+
+  
+.heading{
+  width: 40%;
+}
+/* Add this CSS to your stylesheet */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading h1 {
+  animation: fadeInUp 1s ease-out;
+}
+/* Add this CSS to your stylesheet */
+
+.members {
+  position: relative;
+  overflow: hidden;
+}
+
+.members:hover {
+  transform: scale(1.1); /* Adjust the scaling factor as needed */
+  transition: transform 0.3s ease; /* Adjust the transition duration and easing as needed */
+}
+
+.members p,
+.members h5,
+.members h6 {
+  transition: color 0.3s ease; /* Add transition for text color change */
+}
+
+.members:hover p,
+.members:hover h5,
+.members:hover h6 {
+  color: #ff4500; /* Change the color to your desired hover color */
+}
+
+
+.minidoc{
+  width: 100%;
+}
+.doc{
+  width: 100%;
+  max-width: 100%; /* Make the image responsive */
+  height: auto;   /* Maintain the aspect ratio */
+  margin-top: 8px;
+  text-align: center;
+}
+h1{
+  font-size: 30px;
+  margin-bottom: 13px;
+}
+p{
+color:#000000;
+}
+h1 span{
+  color: #007E85;
+}
+.health{
+  color: #6EAB36;
+}
+.btn{
+  padding: 10px 7px;
+  border-radius: 10px;
+  background-color: #007E85;
+  color: white;
+  border: none;
+  margin: 12px auto;
+}
+.minicard{
+  margin-top: 20px;
+  
+}
+.meet{
+  background-color: #ECECEC;
+  padding-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .hero1 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .doctor,
+  .heading {
+    width: 100%;
+  }
+}
+@media (max-width: 540px){
+  .herr{
+    margin-top: 130px;
+   
+  }
+
+}
+@media (max-width: 392px){
+  .herr{
+    margin-top: 180px;
+   
+  }
+
+}
+@media (max-width: 850px){
+  .heading{
+    margin-top:35px ;
+  }
+}
+/* .hero2{
+  background-color: #ECECEC;
+} */
+.about{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+}
+.about div{
+  margin: 0 auto;
+
+}
+.about h2{
+  color: #007E85;
+  font-size: 35px;
+}
+.about h5{
+  padding-bottom: 20px;
+}
+.results{
+  color: #007E85;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.doc2{
+  width: 50%;
+}
+.heading2{
+  width: 50%;
+  
+}
+.treatment {
+  width: 100%;
+}
+
+.treatmentpic {
+  width: 100%;
+  max-width: 100%; /* Make the image responsive */
+  height: auto;   /* Maintain the aspect ratio */
+  margin-top: 30px;
+}
+.heading2 h1{
+  color: #007E85;
+}
+.service{
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+  
+}
+.service h1{
+  color: #007E85;
+}
+.card{
+  width: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 14px;
+  
+}
+.card h3{
+  color: #007E85;
+  margin-bottom: 7px;
+}
+.card h6{
+  margin-bottom: 7px;
+}
+
+.imgage{
+  width: 100%;
+}
+.teeth{
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.member{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.members{
+  background-color: white;
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 14px;
+  text-align: center;
+  margin-bottom: 19px;
+  
+}
+
+.members >p{
+  color: #007E85;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.members >h5{
+  margin-bottom: 10px;
+
+}
+.members >h6{
+  padding-bottom: 10px;
+}
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #007E85;
+  align-items: center;
+  margin-top: 15px;
+  padding: 8px;
+
+}
+.footer h2{
+  margin-top: 8px;
+}
+.footerul{
+  display: inline-block;
+  margin-top: 8px;
+}
+.footerul li{
+  padding: 5px;
+  color: white;
+}
+/* Add this CSS to your stylesheet */
+/* Add this CSS to your stylesheet */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.heading2 h1 {
+  overflow: hidden; /* Ensures the text is initially hidden */
+  border-right: 2px solid #007E85; /* Simulates the cursor */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  animation: typing 3s steps(35) 1s 1 normal both, /* Adjust the duration as needed */
+             fadeInUp 1s ease-out;
+}
+
+
+@media (max-width: 768px) {
+  .hero1 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .doc2,
+  .heading2{
+    width: 100%;
+  }}
+  @media (max-width: 928px){
+    .cards,.member{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+  @media (max-width: 640px){
+    .footer{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;}
+  }
+/* ///////about page css// */
+
+
+
+.section {
+  position: relative;
+}
+
+.backgroundimage {
+  width: 100%;
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.adjustfooter{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 8px;
+}
+/* Add this CSS to your stylesheet */
+
+.contact-section {
+  text-align: center;
+  padding: 50px 0; /* Adjust the padding as needed */
+}
+
+.contact-heading {
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+.contact-heading h1 {
+  color:#007E85; /* Set your desired heading color */
+  font-size: 2em; /* Adjust the font size as needed */
+}
+
+.contact-heading p {
+  color:black; /* Set your desired paragraph text color */
+  font-size: 1.2em; /* Adjust the font size as needed */
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+
+/* Add additional styles for your contact form or other content here */
+
+
+@media screen and (min-width: 768px) {
+  /* Adjustments for medium-sized screens and above */
+  .backgroundimage {
+    margin-top: 76px;
+  }
+}
+
+
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4; /* Change this to your desired background color */
+}
+
+form {
+  width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: auto
+}
+
+div {
+  margin-bottom: 15px;
+}
+/*  */
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.buton {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.span{
+  display: block;
+  margin-bottom: 5px;
+  margin-right: 10px; /* Add some spacing between the label and radio buttons */
+}
+
+ label {
+  margin-right: 15px; /* Add spacing between radio buttons */
+ }
+
+
+input[type="text"][value="Register"] {
+  background-color: #4caf50; /* Change this to your desired button color */
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+input[type="text"][value="Register"]:hover {
+  background-color:green; /* Change this to your desired button hover color */
+}
+/* Add this CSS for animation */
+
+@keyframes scaleIn {
+  from {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+form {
+  animation: scaleIn 0.7s ease-in-out; /* Apply the animation to the form */
+}
+
+/* Additional styling for the button hover effect */
+
+input[type="text"][value="Register"] {
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="text"][value="Register"]:hover {
+  background-color: #45a049;
+}
+
+/* about page css */
+
+.aboutbackground {
+  background-image: url(./asset/background.png);
+  width: 100%;
+  height: 80vh; /* Set the height to cover the full viewport */
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 90px;
+  background-position: center center; /* Adjust as needed */
+  
+  
+}
+.parent-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  padding-top: 30px;
+  padding-left: 5px;
+   
+}
+.hospital{
+  padding-top: 80px;
+  padding-left: 10px;
+  width: 100%;
+  max-width: 600px;
+  
+  
+}
+.hospital h1 {
+  color: white;
+  font-size: 45px;
+  padding-top: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0; /* Initial opacity */
+  animation: fadeIn 1.5s ease-in-out forwards; /* Animation properties */
+}
+.hospital > p{
+  color: white;
+  margin: 8px;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px); /* Optional: Start from a slightly higher position */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0); /* Optional: End at the normal position */
+  }
+}
+
+.btn1{
+  padding: 10px;
+  background: #007E85;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  margin-top: 12px;
+  margin-right: 16px;
+  cursor: pointer;
+}
+.btn2{
+  padding: 8px;
+  background:none;
+  color: white;
+  border-radius: 15px;
+  border: none;
+  margin-top: 12px;
+  margin-right: 16px;
+  cursor: pointer;
+  border: 2px solid #007E85;
+}
+
+
+
+
+.faq{
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+.faq h1{
+  color: #007E85;
+  font-size: 37px;
+}
+.faqmini{
+  width: 220px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  
+}
+.faqmini h4{
+  padding-bottom: 6px;
+  color: #007E85;
+}
+.mainfaq{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+/* styles.css or your stylesheet file */
+.faqmini:hover {
+  transform: rotate(5deg); /* Rotate the div by 15 degrees on hover */
+}
+
+
+
+
+.testimonial{
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+.testimonial > h1{
+  color: #007E85;
+  font-size: 30px;
+  margin-top: 9px;
+}
+.testimonail1{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 280px;
+  padding: 17px;
+
+}
+.maintestimonial{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.testimonail1 > h4{
+    margin: 10px 0px;
+    color: #007E85;
+}
+.testimonail1 > h5{
+  margin: 10px 0px;
+  padding-bottom: 10px;
+}
+
+.customers{
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  margin: 10 auto;
+}
+.customer{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 38px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.customer  {
+  transition: transform 0.3s ease-in-out;
+}
+
+.customer:hover .customer-item {
+  transform: scale(1.2);
+}
+.customers h1{
+  color: #007E85;
+  font-size: 30px;
+  margin-top: 30px;
+}
+.minicustomer{
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 280px;
+  padding: 17px;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+.minicustomer:hover {
+  transform: scale(1.1);
+}
+.minicustomer>h5:hover {
+  color: #007E85;
+}
+.minicustomer span{
+  color: yellow;
+  text-align: center;
+ 
+}
+.minicustomer > h5{
+  margin-top: 10px;
+}
+.div1{
+  margin-top: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  /* Adjustments for smaller screens */
+  .backgroundimage {
+    margin-top: 74px;
+  }
+}
+@media screen and (max-width: 540px) {
+  /* Adjustments for smaller screens */
+  .backgroundimage {
+    margin-top: 148px;
+  }
+}
+@media screen and (max-width: 390px) {
+  /* Adjustments for smaller screens */
+  .backgroundimage {
+    margin-top: 205px;
+  }
+}
+@media screen and (max-width: 600px) {
+  form {
+      width: 87%;
+  }
+}
+@media screen and (max-width: 393px){
+  .parent-container {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+   padding-top: 35px; 
+     
+  }
+}
+
